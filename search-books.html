@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartLib - Search Books</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans p-6">
+        <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <div class="flex items-center space-x-3">
+                <div class="">
+                    <i class="fas fa-book-open text-indigo-800 text-2xl"></i>
+                </div>
+                <span class="text-2xl font-bold text-gray-800">Smart<span class="text-indigo-600">Lib</span></span>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-2">
+                <a href="search-books.html" class="px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition-all">
+                    <i class="fas fa-search mr-2"></i>Search
+                </a>
+                <a href="borrow-book.html" class="px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition-all">
+                    <i class="fas fa-hand-holding mr-2"></i>Borrow
+                </a>
+                <a href="return-book.html" class="px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition-all">
+                    <i class="fas fa-undo-alt mr-2"></i>Return
+                </a>
+                <a href="view-history.html" class="px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition-all">
+                    <i class="fas fa-history mr-2"></i>History
+                </a>
+                <a href="reserve-book.html" class="px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition-all">
+                    <i class="fas fa-bookmark mr-2"></i>Reserve
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <div class="hidden sm:block text-right">
+                    <p class="text-sm font-semibold">Providence</p>
+                    <p class="text-xs text-gray-500">Student</p>
+                </div>
+                <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-user text-indigo-600"></i>
+                </div>
+                <a href="login.html" class="text-red-500 hover:text-red-700">
+                    <i class="fas fa-sign-out-alt text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+    <div class="max-w-7xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-sm p-6 mb-6">
+            <h1 class="text-3xl font-bold text-gray-800 flex items-center">
+                <i class="fas fa-search text-indigo-600 mr-3"></i>Search Books
+            </h1>
+            <p class="text-gray-500 mt-1">Find books by title, author, or category</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm p-6 mb-8">
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="flex-1 relative">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" placeholder="Search for books..." 
+                           class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500">
+                </div>
+                
+                <select class="md:w-48 px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500">
+                    <option value="all">All Categories</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="literature">Literature</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                    <option value="mathematics">Mathematics</option>
+                </select>
+                
+                <button class="bg-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition-all">
+                    <i class="fas fa-search mr-2"></i>Search
+                </button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 hover:shadow-lg transition-all">
+                <div class="flex items-start">
+                    <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                        <i class="fas fa-book text-indigo-600 text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-lg">Database Systems</h3>
+                        <p class="text-sm text-gray-600">by Elmasri & Navathe</p>
+                        <p class="text-xs text-gray-500 mt-1">ISBN: 9780133002010</p>
+                        <div class="mt-2">
+                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Available</span>
+                            <span class="ml-2 text-xs text-gray-500">Computer Science</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 hover:shadow-lg transition-all">
+                <div class="flex items-start">
+                    <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                        <i class="fas fa-book text-indigo-600 text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-lg">The Great Gatsby</h3>
+                        <p class="text-sm text-gray-600">by F. Scott Fitzgerald</p>
+                        <p class="text-xs text-gray-500 mt-1">ISBN: 9780743273565</p>
+                        <div class="mt-2">
+                            <span class="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full">Reserved</span>
+                            <span class="ml-2 text-xs text-gray-500">Literature</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 hover:shadow-lg transition-all">
+                <div class="flex items-start">
+                    <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                        <i class="fas fa-book text-indigo-600 text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-lg">A Brief History of Time</h3>
+                        <p class="text-sm text-gray-600">by Stephen Hawking</p>
+                        <p class="text-xs text-gray-500 mt-1">ISBN: 9780553380163</p>
+                        <div class="mt-2">
+                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Available</span>
+                            <span class="ml-2 text-xs text-gray-500">Science</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 bg-white rounded-xl p-4">
+            <h3 class="font-semibold text-gray-700 mb-2">Recent Searches:</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Database</span>
+                <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Algorithms</span>
+                <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Python</span>
+                <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Machine Learning</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
